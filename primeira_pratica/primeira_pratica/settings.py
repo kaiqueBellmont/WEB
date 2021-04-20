@@ -81,7 +81,12 @@ WSGI_APPLICATION = 'primeira_pratica.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'primeira_pratica',
+        'USER': 'kaique',
+        'PASSWORD': 'Python@$123',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+
     }
 }
 
@@ -110,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 

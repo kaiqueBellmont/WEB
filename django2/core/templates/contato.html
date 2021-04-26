@@ -8,20 +8,17 @@
 </head>
 <body>
     <div class="container">
-    <h1>Contato</h1>
-    {% bootstrap_messages %}
+        <h1>Contato</h1>
+        {% bootstrap_messages %}
 
         <form action="{% url 'contato' %}" method="post" class="form" autocomplete="off">
             {% csrf_token %}
-            {% bootstrap_form form%}
-
+            {% bootstrap_form form %}
             {% buttons %}
                 <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
             {% endbuttons %}
-
         </form>
     </div>
-
 {% bootstrap_javascript jquery='full' %}
 </body>
 </html>

@@ -18,8 +18,8 @@ class IndexView(FormView):
         return context
 
     def form_valid(self, form, *args, **kwargs):
-        form.send_mail()
         messages.success(self.request, 'E-mail enviado com sucesso')
+        form.save(self, *args)
         return super(IndexView, self).form_valid(form, *args, **kwargs)
 
     def form_invalid(self, form, *args, **kwargs):

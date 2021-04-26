@@ -1,0 +1,42 @@
+{% load static %}
+<div id="booknow" class="contact">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding-right1">
+                  <div class="rable-box">
+                     <figure>
+                     <img src="{% static 'images/cac.png' %}" alt="#"/>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding-left1">
+                  <div class="contact">
+                     <div class="titlepage">
+                        <h2>Contato <br><strong class="white "></strong></h2>
+                     </div>
+                     <form class="form" id="Contato" method="post" action="{% url 'index' %}">
+                        {% csrf_token %}
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <input data-model-name="nome" id="nome"  class="contactus" placeholder="nome" type="text" name="nome">
+                           </div>
+                           <div class="col-sm-12">
+                              <input id="telefone" class="contactus" placeholder="telefone" type="text" name="telefone">
+                           </div>
+                           <div class="col-sm-12">
+                              <input id="email" class="contactus" placeholder="email" type="text" name="email">
+                           </div>
+                              <div class="col-sm-12">
+                              </div>
+                           <div class="col-sm-12">
+                              <textarea id="mensagem" class="textarea" placeholder="mensagem" type="text" name="mensagem"></textarea>
+                           </div>
+                           <div class="col-sm-12">
+                              <button class="send">Enviar</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>

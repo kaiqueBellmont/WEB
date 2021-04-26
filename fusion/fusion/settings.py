@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6c84000n*5423ov#u9h6f@&+%1ph4rxi(t1!83z+1u@(%2hh!6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -94,8 +94,16 @@ DATABASES = {
 
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'fusion',
+        'USER:': 'kaique',
+        'PASSWORD': 'Python@$123',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
